@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>название</title>
+<style>
+  :root{
+    --bg:#3a2730;
+    --accent:#8f5277;
+    --card:#e7e7e7;
+    --text:#ffffff;
+    --max-width:1100px; /* увеличили общую ширину контейнера */
+  }
+  html,body{margin:0;padding:0;background:var(--bg);font-family:Arial,sans-serif;color:var(--text);}
+  .wrap{
+    max-width:var(--max-width);
+    margin:20px auto;
+    padding:24px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+    box-sizing:border-box;
+  }
+
+  .header{width:100%;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.05);padding:12px 16px;border-radius:10px;}
+  .brand{font-weight: 700;}
+  .profile{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.06);}
+
+  .section-block{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:12px;
+  }
+
+  /* увеличили max-width внутреннего контента */
+  .section-inner{
+    width:100%;
+    max-width:5000px; /* стало шире */
+    background:var(--card);
+    border-radius:10px;
+    padding:18px;
+    box-sizing:border-box;
+  }
+
+  .section-title{font-weight:700;color:var(--text);margin-bottom:8px;text-align:center;}
+
+  .cards-row{display:flex;gap:16px;justify-content:center;}
+  .card{flex:1;min-width:140px;height:140px;border-radius:10px;background:linear-gradient(180deg,#fff,#e0e0e0);}
+
+  /* третий блок (promo) увеличен по высоте и padding */
+  .promo{
+    width:100%;
+    max-width:1000px;
+    background:var(--accent);
+    padding:36px;
+    border-radius:10px;
+    color:#00d0df;
+    font-weight:700;
+    text-align:center;
+    min-height:250px; /* увеличенная длина/высота */
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  @media (max-width:900px){
+    :root{ --max-width:900px; }
+    .section-inner{max-width:860px;}
+    .promo{max-width:860px;}
+  }
+  @media (max-width:700px){
+    .wrap{padding:12px;}
+    .section-inner{padding:12px;}
+    .cards-row{flex-direction:column;}
+    .card{width:100%;min-width:0;height:120px;}
+    .promo{padding:24px;min-height:180px;}
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="header">
+      <div class="brand">NAZVANIE</div>
+      <div class="profile">👤</div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-title">ТОП-10 МЕСЯЦА</div>
+      <div class="section-inner">
+        <div class="cards-row">
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-title">НОВИНКИ</div>
+      <div class="section-inner">
+        <div class="cards-row">
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+          </div>
+        </div>
+        </div>
+
+        <div class="section-block">
+            <div class="section-title">БАМ</div>
+            <div class="promo">BABABABABABABABABABABABABABABA</div>
+          </div>
+      
+          <div class="section-block">
+            <div class="section-title">ЛЮДИ ЧАСТО ВЫБИРАЮТ</div>
+            <div class="section-inner">
+              <div class="cards-row">
+                <div class="card" style="height:160px;"></div>
+                <div class="card" style="height:160px;"></div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="section-block">
+            <div class="section-title">ОТЛОЖИЛИ ПРОСМОТР</div>
+            <div class="section-inner">
+              <div class="cards-row">
+                <div class="card" style="height:160px;"></div>
+                <div class="card" style="height:160px;"></div>
+              </div>
+            </div>
+          </div>
+      
+        </div>
+      </body>
+      </html>
