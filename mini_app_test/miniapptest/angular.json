@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "outputPath": "dist/<имя-проекта>",
+            "outputPath": "dist/mini_app_test",
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
